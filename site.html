@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            background-color: darkblue;
+}
+        body {
+    font-family: Arial, sans-serif;
+}
+        h1 {
+           color: white;
+}
+        h3 {
+         color: white;
+}
+        p#nomeExibido{
+         color: white;
+}
+       
+    </style>
+    <title>Name Guesser</title>
+</head>
+<body>
+    <h1>Insira seu nome:</h1>
+    <form id="nomeForm">
+        <input type="text" id="nomeInput" placeholder="Digite seu nome">
+        <button type="button" onclick="exibirNome()">Inserir</button>
+    </form>
+    <p id="nomeExibido"></p>
+
+    <script>
+        function exibirNome() {
+            const nome = document.getElementById('nomeInput').value;
+            document.getElementById('nomeExibido').textContent = `Seu nome é: ${nome}`;
+        }
+    </script>
+</body>
+</html>
