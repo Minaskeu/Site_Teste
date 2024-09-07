@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2672d4;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            margin: 0;
+            padding: 0.5em;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 1em;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #loginForm {
+            display: none;
+            background-color: white;
+            padding: 2em;
+            border: 1px solid #ccc;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site</h1>
+    </header>
+    <nav>
+        <a href="SiteFuncional.html">Início</a>
+        <a href="AboutPage.html">Sobre</a>
+        <a href="contact.html">Contato</a>
+        <a href="#login" onclick="showLoginForm()">Login</a>
+    </nav>
+    <main>
+        <h2>Conteúdo Principal</h2>
+        <p>Pensar em alguma coisa para o site.</p>
+    </main>
+    <div id="loginForm">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username"><br><br>
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password"><br><br>
+            <button type="submit">Entrar</button>
+            <button type="button" onclick="hideLoginForm()">Cancelar</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 MVL. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function showLoginForm() {
+            document.getElementById('loginForm').style.display = 'block';
+        }
+        function hideLoginForm() {
+            document.getElementById('loginForm').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
